@@ -1,0 +1,27 @@
+:host { all: initial; color-scheme: light; font-family: Inter, "Segoe UI", sans-serif; }
+:host([hidden]) { display: none !important; }
+.panel { position: fixed; z-index: 2147483647; right: 18px; bottom: 18px; display: flex; flex-direction: column; width: min(390px, calc(100vw - 36px)); max-height: min(76vh, 760px); overflow: hidden; color: #202124; background: #fff; border: 1px solid #d6d9df; border-radius: 12px; box-shadow: 0 12px 40px #0005; font-size: 13px; }
+.header { padding: 12px 14px; color: #fff; background: #3157a4; }
+.subtitle { margin-top: 3px; color: #e3eaff; font-size: 11px; }
+.body { overflow: auto; padding: 12px; }
+.status { margin-bottom: 8px; color: #536174; }
+.turn { margin-bottom: 8px; padding: 7px 9px; border-radius: 6px; background: #f0f2f6; color: #536174; }
+.turn.wait { background: #fff3d8; color: #745113; }
+.turn.ready { background: #e9f6e9; color: #24632a; }
+.summary { margin-bottom: 5px; font-weight: 700; overflow-wrap: anywhere; }
+.count { margin-bottom: 8px; color: #586174; }
+.candidate-list { margin: 0; padding-left: 24px; }
+.candidate-list li { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 0; border-bottom: 1px solid #edf0f3; }
+.word { font-weight: 600; overflow-wrap: anywhere; }
+.row-actions { display: flex; flex: 0 0 auto; gap: 4px; }
+button { cursor: pointer; border: 1px solid #c8ced8; border-radius: 6px; padding: 5px 8px; background: #f7f8fa; color: #202124; font: inherit; }
+button:hover { background: #e9eef8; }
+.controls { display: flex; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.manual { margin-top: 10px; }
+.manual summary { cursor: pointer; color: #3157a4; }
+.manual textarea { box-sizing: border-box; display: block; width: 100%; margin: 8px 0 6px; padding: 8px; border: 1px solid #c8ced8; border-radius: 6px; resize: vertical; font: inherit; }
+.manual form { display: flex; flex-wrap: wrap; align-items: end; gap: 5px; }
+.manual form label { flex: 1 1 90px; font-size: 11px; color: #536174; }
+.manual form input { box-sizing: border-box; display: block; width: 100%; margin-top: 3px; padding: 6px; border: 1px solid #c8ced8; border-radius: 6px; font: inherit; text-transform: uppercase; }
+.notice { margin-top: 10px; color: #707987; font-size: 11px; }
+.empty { padding: 14px 4px; color: #6f7783; text-align: center; }

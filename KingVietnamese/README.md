@@ -4,25 +4,17 @@ KingVietnamese helps solve the **Vua Tiếng Việt** letter scramble in Discord
 
 ## Chrome extension
 
-1. Open `chrome://extensions` in Chrome and enable **Developer mode**.
-2. Choose **Load unpacked** and select this project's `chrome` folder.
-3. Open or refresh Discord Web at `https://discord.com/channels/`.
+Install the shared DiscordACE extension from the repository's `chrome` folder, then assign **KingVietnamese** to the relevant channel in its toolbar popup. The helper panel reads visible message text, tracks the latest Vua Tiếng Việt card, and updates when chat changes. Use **Copy** to copy a candidate, **Tried** to remove it from the remaining list, **Undo** to restore the last removed candidate, and **Reset round** to clear tried candidates for that card. If the card is not detected, use **Paste a prompt manually**. The popup on/off switch hides the panel completely when off.
 
-The helper panel appears at the lower right. It reads visible message text from the rendered page, tracks the latest card whose text includes “Vua Tiếng Việt,” and updates when the chat changes. Use **Copy** to copy a candidate, **Tried** to remove it from the remaining list, **Undo** to restore the last removed candidate, and **Reset round** to clear the tried list for that card. If the message layout is not detected, open **Paste a prompt manually** and paste the card text. No OCR, Discord token, private API, or message sending is used.
-
-Use the KingVietnamese toolbar button to turn the helper on or off. When off, the in-page panel is hidden and chat scanning is paused. The setting persists across Discord tabs and browser restarts.
-
-The extension uses a packaged local word list. It needs no runtime network access. The content script only runs on Discord channel pages and stores tried candidates in Chrome's extension storage.
+The older unpacked extension under `KingVietnamese/chrome` has been replaced by the shared extension. Remove that installation before loading the new `chrome` folder. Tried-word data stored by the old installation cannot transfer automatically.
 
 ## Python desktop helper
 
 The separate Tkinter helper works from copied challenge text:
 
 ```powershell
-conda run -n base python .\kingvietnamese.py
+conda run -n base python .\KingVietnamese\kingvietnamese.py
 ```
-
-Copy a challenge card from Discord Web, then use **Paste from clipboard**. Candidate matching and tried-word controls work the same way as in the extension.
 
 ## Dictionary data
 

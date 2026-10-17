@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DiscordACE settings</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <main class="settings">
+      <h1>DiscordACE</h1>
+      <p>Read-only game suggestions for Discord Web.</p>
+      <label class="toggle-row" for="helper-enabled">
+        <span>Helper</span>
+        <input id="helper-enabled" type="checkbox">
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+      <label class="field" for="display-name">My Discord display name
+        <input id="display-name" type="text" autocomplete="off" placeholder="Exact displayed name">
+      </label>
+      <label class="field" for="channel-game">This channel
+        <select id="channel-game">
+          <option value="">No helper</option>
+          <option value="KingVietnamese">KingVietnamese</option>
+          <option value="CountNum">CountNum</option>
+          <option value="LinkingWord">LinkingWord</option>
+          <option value="Wordle">Wordle</option>
+        </select>
+      </label>
+      <label class="toggle-row" id="auto-type-row" for="auto-type-count" hidden>
+        <span>Auto-type next number</span>
+        <input id="auto-type-count" type="checkbox">
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+      <div id="auto-type-hint" class="hint" hidden>Fills an empty composer only when your turn is confirmed. Never sends.</div>
+      <div id="channel-label" class="hint"></div>
+      <div id="status" role="status"></div>
+    </main>
+  </body>
+</html>
