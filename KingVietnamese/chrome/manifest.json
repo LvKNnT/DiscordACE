@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "KingVietnamese helper",
+  "version": "1.0.0",
+  "description": "Shows local Vietnamese anagram candidates for Vua Tiếng Việt cards in Discord Web.",
+  "permissions": ["storage", "clipboardWrite"],
+  "action": {
+    "default_title": "KingVietnamese helper",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/channels/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["Viet74K.txt", "panel.css"],
+      "matches": ["https://discord.com/*"]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Local Vietnamese anagram helper for copied Vua Tiếng Việt prompts.
+"""Local KingVietnamese helper for Vua Tiếng Việt anagram prompts.
 
 The app reads challenge text that the user copies from Discord Web. It never
 connects to Discord, reads browser internals, or sends a Discord message.
@@ -16,7 +16,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 
-APP_NAME = "DiscordACE"
+APP_NAME = "KingVietnamese"
 WORDLIST_PATH = Path(__file__).with_name("Viet74K.txt")
 STATE_PATH = Path.home() / "AppData" / "Local" / APP_NAME / "state.json"
 COUNT_PATTERN = re.compile(r"(?iu)(?<!\w)(\d+)\s*(?:tiếng|tieng)(?!\w)")
@@ -116,7 +116,7 @@ class VietnameseLexicon:
         return matches
 
 
-class DiscordACEApp:
+class KingVietnameseApp:
     """Small Tk interface for candidate review and tried-word tracking."""
 
     def __init__(self, root: tk.Tk, lexicon: VietnameseLexicon) -> None:
@@ -129,7 +129,7 @@ class DiscordACEApp:
         self.round_key: str | None = None
         self.state = self._load_state()
 
-        self.root.title("DiscordACE — Vietnamese word helper")
+        self.root.title("KingVietnamese — Vietnamese word helper")
         self.root.geometry("680x680")
         self.root.minsize(520, 500)
         self._build_ui()
@@ -311,7 +311,7 @@ def main() -> int:
         return 1
 
     root = tk.Tk()
-    DiscordACEApp(root, lexicon)
+    KingVietnameseApp(root, lexicon)
     root.mainloop()
     return 0
 
